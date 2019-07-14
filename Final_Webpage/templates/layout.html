@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{{url_for('static', filename='demo.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='header-user-dropdown.css')}}">
+
+  <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="{{url_for('static', filename='footer.css')}}"
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+
+
+
+
+</head>
+
+
+<body>
+
+<header class="header-user-dropdown" style="  background-color:#292c2f;
+  box-shadow:0 1px 1px #ccc;
+  padding: 30px 50px;
+  height: 85px;
+  color: #ffffff;
+  box-sizing: border-box;
+  margin-bottom: -20px;">
+
+  <div class="header-limiter">
+    <h1><a href="#" style=" font: normal 28px Cookie, Arial, Helvetica, sans-serif;">KJSCE - <span> FY </span></a></h1>
+
+    <nav>
+      <a href="#" style="font-size-adjust: 20px;">Resources</a>
+      <a href="#">Contact Us</a>
+    </nav>
+
+
+    <div class="header-user-menu">
+      <img src="{{url_for('static', filename='icon2.png')}}" alt="User Image"/>
+
+      <ul>
+        <li><a href="#">Books</a></li>
+        <li><a href="#">Accesories</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</header>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+  $(document).ready(function(){
+
+    var userMenu = $('.header-user-dropdown .header-user-menu');
+
+    userMenu.on('touchend', function(e){
+
+      userMenu.addClass('show');
+
+      e.preventDefault();
+      e.stopPropagation();
+
+    });
+
+    // This code makes the user dropdown work on mobile devices
+
+    $(document).on('touchend', function(e){
+
+      // If the page is touched anywhere outside the user menu, close it
+      userMenu.removeClass('show');
+
+    });
+
+  });
+
+</script>
+    {%block content%}{%endblock%}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+<footer class="container-fluid bg-grey py-5">
+<div class="container">
+   <div class="row">
+      <div class="col-md-6">
+         <div class="row">
+            <div class="col-md-6 ">
+               <div class="logo-part">
+                  <img src="https://img.collegepravesh.com/2018/11/KJSCE-Mumbai-Logo.png" class="w-50 logo-footer" >
+
+               </div>
+            </div>
+            <div class="col-md-6 px-4">
+               <h6> About Company</h6>
+               <p>Feel free to contact us .</p>
+               <a href="#" class="btn-footer"> Contact Us</a>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6">
+         <div class="row">
+            <div class="col-md-6 px-4">
+               <h6> Quick Links</h6>
+               <div class="row ">
+                  <div class="col-md-6">
+                     <ul>
+                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="#"> About</a> </li>
+                        <li> <a href="#"> References</a> </li>
+                        <li> <a href="#"> Contact Us</a> </li>
+                     </ul>
+                  </div>
+             </div>
+            </div>
+            <div class="col-md-6 ">
+               <h6> Social </h6>
+               <div class="social">
+                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+
+</html>
